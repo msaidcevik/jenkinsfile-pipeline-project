@@ -3,8 +3,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'Welcome to My Class'
+                echo 'Clarusway_Way to Reinvent Yourself'
+                sh 'echo Integrating Jenkins Pipeline with GitHub Webhook using Jenkinsfile'
             }
         }
     }
-}               
+}
