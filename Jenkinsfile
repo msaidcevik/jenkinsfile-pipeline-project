@@ -25,6 +25,9 @@ pipeline {
     post {
         always {
             clearWs ()
+            dir("${env.WORKSPACE}@tmp") {
+                deleteDir()
+            }
         }
     }
 }
