@@ -1,12 +1,11 @@
 pipeline {
     agent {
-        any {
-            customWorkspace '/var/lib/jenkins/workspace/pipeline-webhook'
-        }
+        any 
     }
     stages {      
         stage('run') {
             steps {
+                ws("/var/jenkins_workspace")
                 echo 'Clarusway_Way to Reinvent Yourself'
                 sh 'python --version'
                 sh 'python pipeline.py'
