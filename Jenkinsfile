@@ -1,7 +1,7 @@
 pipeline {
     agent any
     options {
-        ws("/path/to/workspace")
+        ws("/var/lib/jenkins/workspace/pipeline-webhook")
     }
     stages {      
         stage('run') {
