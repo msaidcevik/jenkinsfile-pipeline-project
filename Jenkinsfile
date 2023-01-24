@@ -8,11 +8,11 @@ pipeline {
             }
         }        
         stage('run') {
-            steps {
-                echo 'Clarusway_Way to Reinvent Yourself'
-                sh 'python --version'
-                sh 'python pipeline.py'
-                echo 'finnesh'
+            try {
+                dir('/var/lib/jenkins/workspace/pipeline-webhook')
+                    sh 'python --version'
+                    sh 'python pipeline.py'
+                    echo 'finnesh'
             }
         }
         stage('test') {
