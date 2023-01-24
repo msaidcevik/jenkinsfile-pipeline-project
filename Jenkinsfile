@@ -2,7 +2,7 @@ pipeline {
     agent {
         node {
         label 'my-label'
-        customWorkspace '/my/path/to/workspace'
+        customWorkspace '/var/lib/jenkins/workspace/pipeline-webhook'
     }
 }
     stages {      
