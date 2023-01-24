@@ -23,11 +23,12 @@ pipeline {
         }
     }
     post {
-        always {
-            clearWs ()
+        always {cd .
+            cleanWs()
             dir("${env.WORKSPACE}@tmp") {
                 deleteDir()
             }
         }
-    }
+    }   
 }
+
