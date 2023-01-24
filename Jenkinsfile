@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        node {
+        any {
             customWorkspace '/var/lib/jenkins/workspace/pipeline-webhook'
         }
     }
