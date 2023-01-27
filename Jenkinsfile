@@ -4,8 +4,8 @@ pipeline {
         stage('run') {
             steps {
                 echo 'Clarusway_Way to Reinvent Yourself'
-                sh 'python3 --version'
-                sh 'python3 pipeline.py'
+                sh 'python --version'
+                sh 'python pipeline.py'
                 echo 'finnesh'
             }
         }
@@ -15,17 +15,6 @@ pipeline {
                 sh 'echo Integrating Jenkins Pipeline with GitHub Webhook using Jenkinsfile'
             }
         }
-        stage('java-1') {
-            steps {
-                echo 'Compiling the java source code'
-                sh 'java hello.java'
-            }
-        }
-        stage('java-2') {
-            steps {
-                echo 'Running the compiled java code.'
-                sh 'java hello'
-            }
-        }
+        
     }
 }
